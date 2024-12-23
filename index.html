@@ -1,120 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogging Platform</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #1d4870;
+        color: white;
+        margin-top: 50px;
+        top: 0;
+        
+      }
 
-        .container {
-            margin-top: 30px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #102a42;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
 
-        .blog-post {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      .container {
+        margin-top: 30px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+       }
 
-        .new-post-form {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        text-align: center;
+      }
 
-        .form-control {
-            margin-bottom: 15px;
-        }
+      .blog-post {
+        background-color:#1e293b;
+        margin: 15px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
+        
+      }
+      
 
-        .btn-submit {
-            background-color: #007bff;
-            color: white;
-        }
+      .new-post-form {
+        background-color:#1e293b; 
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow:0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-control {
+        margin-bottom: 15px;
+        
+      }
+
+      .blog-post h4 {
+        color: #ffd700;
+        font-weight: bold;
+      }
+
+      .btn {
+        font-weight: bold;
+        color: #ffffff;
+      }
+      .btn-primary {
+        background-color: #ffd700;
+        color: #1e293b;
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+       .btn-submit {
+        background-color: #ffd700;
+        color: #1e293b;
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width:100%;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color:#1d4870;
+        color: white;
+        margin-top: 50px;
+      }
+
+      .nav-link {
+        color: white;
+      }
+
+      .nav-link:hover {
+        color: #f0bc02;
+      }
+
+      .new-post-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        color: #ffd700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .footer-icons a {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+
+      .footer-icons a:hover {
+        color: #f0bc02;
+      }
+
+      .footer-item{
+        color: rgb(245, 247, 247);
+        font-family: 'Lora',serif;
+      }
+      .post-bar {
+        background-color: #343a40;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      .form-group{
+        color:#ffd700;
+      }
+
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header class="text-center">
+      <h1 style="font-size:45px;font-weight: bolder;">My Blogging Platform</h1>
+      <nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <div class="container">
-        <header class="text-center">
-            <h1>My Blogging Platform</h1>
-            <nav>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="row">
-            <div class="col-md-8">
-                <h2>Blog Posts</h2>
-                <div class="blog-post">
-                    <h4>Blog Post Title 1</h4>
-                    <p>Written by Author</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut neque tincidunt, accumsan ante non, dapibus velit...</p>
-                    <a href="indexDetailed.html"> <button class="btn btn-primary">Read More</button></a>
-                </div>
-                <div class="blog-post">
-                    <h4>Blog Post Title 2</h4>
-                    <p>Written by Author</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut neque tincidunt, accumsan ante non, dapibus velit...</p>
-                   <a href="indexDetailed.html"> <button class="btn btn-primary">Read More</button></a>
-                </div>
-
+      <div class="row">
+        <div class="col-md-8">
+          
+          <div class="blog-post">
+            <h4
+              style="
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                  sans-serif;
+              "
+            >
+              <strong>Eat Authentic Ramen</strong>
+            </h4>
+            <div>
+              <img
+                src="https://thewanderingfoodie.weebly.com/uploads/1/3/3/8/133861477/photo-1568096889942-6eedde686635_orig.jpg"
+                class="card-img-top"
+                alt="Blog Image"
+                width="550"
+              />
             </div>
-
-            <!-- New Post Form Section -->
-            <div class="col-md-4">
-                <h2>Create a New Post</h2>
-                <div class="new-post-form">
-                    <form id="newPostForm">
-                        <div class="form-group">
-                            <label for="postTitle">Post Title</label>
-                            <input type="text" class="form-control" id="postTitle" placeholder="Enter post title" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="postContent">Post Content</label>
-                            <textarea class="form-control" id="postContent" rows="5" placeholder="Enter post content" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-submit">Submit Post</button>
-                    </form>
-                </div>
+            <p><i>Written by Anubhav</i></p>
+            <big
+              ><p>
+                It consists of Chinese wheat noodles served in a meat or
+                (occasionally) fish-based broth, often flavored with soy sauce
+                or miso, and uses toppings such as sliced pork, nori (dried
+                seaweed), menma, and scallions.
+              </p></big
+            >
+            <br>
+            <a href="indexDetailed.html">
+              <button class="btn btn-primary">Read More</button></a
+            >
+          </div>
+          <div class="blog-post">
+            <h4
+              style="
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                  sans-serif;
+              "
+            >
+              <strong>Vietnamese Spring Rolls</strong>
+            </h4>
+            <div>
+              <img
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*Qf1DW8T3uP2GYcu-.jpg"
+                class="card-img-top"
+                alt="Blog Image"
+                width="550"
+              />
             </div>
+            <p><i>Written by Pranita</i></p>
+            <big
+              ><p class="card-text">
+                If you’re into rolls, you’ll get a stack of rice paper and
+                larger leaves for the art of rolling and dipping. And the
+                dipping sauces? They’re a spectrum — tangy tamarind,
+                sweet-and-salty fish sauce, or a rich roasted peanut sauce. Just
+                ask your server for the perfect pairings — they’re the real
+                flavor guides.
+              </p></big
+            >
+            <br>
+            <a href="indexDetailed.html" class="btn btn-primary">Read More</a>
+          </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="text-center mt-5">
-            <p>&copy; 2024 Blogging Platform</p>
-        </footer>
+
+        <div class="col-md-4">
+          <h2 class="new-post-title">Create a New Post</h2>
+          <div class="new-post-form">
+            <form id="newPostForm">
+              <div class="form-group">
+                <label for="postTitle"><strong>Post Title</strong> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postTitle"
+                  placeholder="Enter post title"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="postContent"><strong>Post Content</strong></label>
+                <textarea
+                  class="form-control"
+                  id="postContent"
+                  rows="5"
+                  placeholder="Enter post content"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit">Submit Post</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- jQuery script to handle the form submission -->
+    <footer class="text-center mt-5">
+      <div class="footer-container">
+        <div class="footer-item">
+          <h5>Created by: GROUP 2</h5>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-item">
+          <h4>Pranita Patel</h4>
+          <p>2341016219</p>
+        </div>
+        <div class="footer-item">
+          <h4>Anubhav Jaiswal</h4>
+          <p>2341010007</p>
+        </div>
+        <div class="footer-item">
+          <h4>Shobhan Satpathy</h4>
+          <p>23410000000</p>
+        </div>
+        <div class="footer-item">
+          <h4>Karan Thakur</h4>
+          <p>2341020010</p>
+        </div>
+      </div>
+    </footer>
+
+
     <script>
-        $(document).ready(function () {
-            $('#newPostForm').submit(function (e) {
-                e.preventDefault();
+      $(document).ready(function () {
+        $("#newPostForm").submit(function (e) {
+          e.preventDefault();
 
-                // Get the values from the form
-                const title = $('#postTitle').val();
-                const content = $('#postContent').val();
 
-                // Create a new blog post dynamically
-                const newPost = `
-                    <div class="blog-post">
+          const title = $("#postTitle").val();
+          const content = $("#postContent").val();
+
+          const newPost = `
+                    <div class="blog-post post-bar">
                         <h4>${title}</h4>
                         <p>Written by Author</p>
                         <p>${content}</p>
@@ -122,15 +320,13 @@
                     </div>
                 `;
 
-                // Append the new post to the blog post list
-                $('.col-md-8').prepend(newPost);
 
-                // Clear the form
-                $('#postTitle').val('');
-                $('#postContent').val('');
-            });
+          $(".col-md-8").prepend(newPost);
+
+          $("#postTitle").val("");
+          $("#postContent").val("");
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
